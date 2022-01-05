@@ -7,8 +7,8 @@ export const GifGrid = ({ category }) => {
 
     return (
         <>
-            <h3 className="animate__animated animate__fadeInLeft">
-                {category}
+            <h3 className="animate__animated animate__fadeInLeft nombreBusqueda">
+                {category.toUpperCase()}
             </h3>
 
             {loading && (

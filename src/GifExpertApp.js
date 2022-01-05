@@ -4,11 +4,11 @@ import { GifGrid } from "./components/GifGrid";
 
 export const GifExpertApp = () => {
     // const categories = ["Soul Eater", "Haikyuu", "Violet Evergarden"];
-    const [categories, setCategories] = useState(["Soul Eater"]);
+    const [categories, setCategories] = useState([]);
 
     return (
         <>
-            <h2>GifExpertApp</h2>
+            <h2 id="nombreApp">Gif Searcher App</h2>
             <AddCategory setCategories={setCategories} />
 
             <hr />
