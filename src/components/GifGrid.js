@@ -12,7 +12,7 @@ export const GifGrid = ({ category }) => {
             </h3>
 
             {loading && (
-                <p className="animate__animated animate__flash">Cargando...</p>
+                <p className="animate__animated animate__flash" id="cargando">Cargando...</p>
             )}
             <div className="card-grid">
                 {images.map((img) => {
