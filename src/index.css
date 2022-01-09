@@ -33,6 +33,7 @@ ol{
     margin: 10px auto;
     overflow: hidden;
     width: 200px;
+    cursor: pointer;
 }
 
 .card p {

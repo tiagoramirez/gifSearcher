@@ -1,9 +1,10 @@
 import React from "react";
+import { irA } from "../helpers/irA";
 
-export const GifGridItem = ({ id, title, url }) => {
+export const GifGridItem = ({ title, url }) => {
 
     return (
-        <div className="card animate__animated animate__fadeInLeft">
+        <div onClick={()=>irA({url})} className="card animate__animated animate__fadeInLeft">
             <img src={url} alt={title} />
             <p>{title.toUpperCase()}</p>
         </div>

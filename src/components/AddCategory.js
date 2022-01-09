@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-export const AddCategory = ({ setCategories }) => {
+export const AddCategory = ({ setCategories, categories }) => {
     const [inputValue, setInputValue] = useState("");
 
     const handleInputChange = (e) => {
@@ -10,8 +10,16 @@ export const AddCategory = ({ setCategories }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (inputValue.trim().length > 2) {
-            setCategories((categories) => [inputValue, ...categories]);
+        setInputValue(inputValue.toUpperCase().trim());
+        
+        if (
+            inputValue.length > 1 &&
+            categories.includes(inputValue) == false
+        ) {
+            setCategories([inputValue, ...categories]);
+            setInputValue("");
+        }
+        if (categories.includes(inputValue) == true) {
             setInputValue("");
         }
     };
@@ -21,6 +29,7 @@ export const AddCategory = ({ setCategories }) => {
             <input
                 type="text"
                 value={inputValue}
+                placeholder="Gif name. E.g.: Messi"
                 onChange={(e) => handleInputChange(e)}
             />
         </form>
