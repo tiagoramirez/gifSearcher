@@ -2,62 +2,112 @@
     font-family: Helvetica, Arial, sans-serif;
 }
 
+html {
+    margin: 0;
+}
+
 body {
     background-color: #282c34;
-    padding: 60px;
+    padding: 0 60px;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    padding: 10px;
+    height: 8vh;
+}
+
+#nombreApp {
+    font-size: 1.75rem;
+    color: cadetblue;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 0%;
 }
 
 input {
     font-size: 1.2rem;
-    color: grey;
+    color: #282c34;
     width: 100%;
-    background-color: darkslategrey;
-    border: none;
+    background-color: cadetblue;
+    border-radius: 0.6rem;
+    border: 0;
+    text-align: center;
+    height: 1.7rem;
 }
 
 .card-grid {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-ol{
+ol {
     padding: 0;
 }
 
-
 .card {
-    background-color: darkslategrey;
-    border: 1px solid #282c34;
-    border-radius: 6px;
-    margin: 10px auto;
+    border: 0;
+    border-radius: 1rem;
+    display: flex;
+    margin: 0.5rem 0;
     overflow: hidden;
-    width: 200px;
+    width: 14rem;
     cursor: pointer;
 }
 
-.card p {
-    padding: 5px;
-    text-align: center;
-    color:grey;
-    font-weight: bolder;
-}
-
 .card img {
-    width: 200px;
+    width: 14rem;
 }
 
-#nombreApp{
-    color: white;
+.nombreBusqueda {
+    color: cadetblue;
     text-align: center;
+    margin: 0.4rem 0;
 }
 
-.nombreBusqueda{
-    color:whitesmoke;
+#cargando {
+    color: cadetblue;
     text-align: center;
+    font-size: 3rem;
 }
 
-#cargando{
-    color:whitesmoke;
-    text-align: center;
+footer {
+    background-color: cadetblue;
+    display: flex;
+    padding: 0.7rem 1.2rem;
+    justify-content: space-between;
+    border-radius: 4rem;
+    margin-bottom: 1rem;
+}
+
+footer button {
+    border-radius: 4rem;
+    border: 0;
+    background-color: #282c34;
+    color: cadetblue;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+footer button:hover{
+    background-color: cadetblue;
+    color: #282c34;
+    border: 1px #282c34 solid;
+}
+
+footer p {
+    color: #282c34;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
 }

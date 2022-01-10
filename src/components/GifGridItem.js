@@ -6,7 +6,6 @@ export const GifGridItem = ({ title, url }) => {
     return (
         <div onClick={()=>irA({url})} className="card animate__animated animate__fadeInLeft">
             <img src={url} alt={title} />
-            <p>{title.toUpperCase()}</p>
         </div>
     );
 };

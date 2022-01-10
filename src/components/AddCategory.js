@@ -5,21 +5,13 @@ export const AddCategory = ({ setCategories, categories }) => {
     const [inputValue, setInputValue] = useState("");
 
     const handleInputChange = (e) => {
-        setInputValue(e.target.value);
+        setInputValue(e.target.value.toUpperCase());
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setInputValue(inputValue.toUpperCase().trim());
-        
-        if (
-            inputValue.length > 1 &&
-            categories.includes(inputValue) == false
-        ) {
+        if (inputValue.length > 1 && categories.includes(inputValue) === false) {
             setCategories([inputValue, ...categories]);
-            setInputValue("");
-        }
-        if (categories.includes(inputValue) == true) {
             setInputValue("");
         }
     };
@@ -27,6 +19,7 @@ export const AddCategory = ({ setCategories, categories }) => {
     return (
         <form onSubmit={handleSubmit}>
             <input
+                className="animate__animated animate__backInDown"
                 type="text"
                 value={inputValue}
                 placeholder="Gif name. E.g.: Messi"
@@ -38,4 +31,5 @@ export const AddCategory = ({ setCategories, categories }) => {
 
 AddCategory.propTypes = {
     setCategories: PropTypes.func.isRequired,
+    categories: PropTypes.array.isRequired,
 };
